@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="cadastro-container">
+        <h2>Cadastro</h2>
+        <form id="cadastroForm">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required class="input" />
+            <br>
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required>
+            <p id="cnpjValidationMessage" class="error hidden">CNPJ inválido</p>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <ul>
+                <li id="ruleLength">Pelo menos 8 caracteres</li>
+                <li id="ruleUppercase">Pelo menos uma letra maiúscula</li>
+                <li id="ruleLowercase">Pelo menos uma letra minúscula</li>
+                <li id="ruleNumber">Pelo menos um número</li>
+                <li id="ruleSpecial">Pelo menos um caractere especial</li>
+            </ul>
+            <p id="validationMessage"></p>
+
+            <label for="confirmarSenha">Confirmar Senha:</label>
+            <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+            <p id="passwordMatch" class="hidden"></p>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <script src="cadastro.js"></script>
+</body>
+</html>
